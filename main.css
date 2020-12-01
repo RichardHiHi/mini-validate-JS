@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(rgba(54, 53, 53, 0.616), rgba(58, 58, 58, 0.644)), url(5b9137e10ce5f5b27e8b4a0c.jpeg);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-register {
+    max-width: 500px;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(1, 1, 1, 0.774);
+    background-color: rgba(214, 205, 205, 0.753);
+}
+
+.header-register {
+    text-align: center;
+    color: rgb(29, 28, 28);
+    line-height: 10px;
+    margin: 50px 0 90px 0;
+    font-size: 4.2rem;
+}
+
+.error-message {
+    color: red;
+    position: absolute;
+    top: 113%;
+    left: 73px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    display: block;
+    visibility: hidden;
+}
+
+.register-control--error .error-message {
+    visibility: unset;
+}
+
+.register-control {
+    text-align: center;
+    margin: 0 30px 35px 40px;
+    position: relative;
+}
+
+.register-policy {
+    display: block;
+    font-size: 8px;
+    text-align: center;
+    margin: 30px 0
+}
+
+.btn-register-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin: 110px 0 30px 0;
+}
+
+.btn-register {
+    padding: 15px 50px;
+    border-radius: 20px;
+    color: rgb(63, 63, 63);
+    background-color: rgb(189, 184, 184);
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 40px rgba(1, 1, 1, 0.596);
+    font-size: 2.2rem;
+}
+
+.btn-register:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(107, 104, 104);
+}
+
+.register-input {
+    background-color: transparent;
+    border-color: transparent;
+    outline-style: none;
+    font-size: 2.7rem;
+    width: 310px;
+    border-bottom: 2px solid transparent;
+}
+
+.register-input:hover {
+    border-bottom: 2px solid rgb(109, 109, 109);
+}
+
+.register-input:focus {
+    border-bottom: 2px solid rgb(109, 109, 109);
+}
+
+.register-input::placeholder {
+    color: rgb(66, 66, 66);
+}
+
+.register-control--error .register-input {
+    border-bottom: 2px solid rgb(211, 66, 66);
+}
+
+.register-control-icon {
+    color: rgb(31, 30, 30);
+    font-size: 2.9rem;
+    margin-right: 10px;
+}
+
+i.register-control-icon-check {
+    color: green;
+    font-size: 2rem;
+    line-height: 100%;
+    visibility: hidden;
+}
+
+.register-control--success .register-control-icon-check {
+    visibility: unset;
+}
