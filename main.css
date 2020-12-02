@@ -39,7 +39,7 @@ body {
     color: red;
     position: absolute;
     top: 113%;
-    left: 73px;
+    left: 0;
     font-weight: 600;
     font-size: 1.8rem;
     text-align: center;
@@ -52,8 +52,7 @@ body {
 }
 
 .register-control {
-    text-align: center;
-    margin: 0 30px 35px 40px;
+    margin: 0 30px 35px 87px;
     position: relative;
 }
 
@@ -95,22 +94,38 @@ body {
     font-size: 2.7rem;
     width: 310px;
     border-bottom: 2px solid transparent;
+    position: relative;
 }
 
-.register-input:hover {
-    border-bottom: 2px solid rgb(109, 109, 109);
+.register-control__under-line {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 1px;
+    background-color: black;
+    width: 68%;
+    animation: scale1 0.2s linear;
+    display: none;
 }
 
-.register-input:focus {
-    border-bottom: 2px solid rgb(109, 109, 109);
+.register-input:hover~.register-control__under-line {
+    display: block;
+}
+
+.register-input:focus~.register-control__under-line {
+    display: block;
+    animation: none;
 }
 
 .register-input::placeholder {
     color: rgb(66, 66, 66);
 }
 
-.register-control--error .register-input {
-    border-bottom: 2px solid rgb(211, 66, 66);
+.register-control--error .register-control__under-line {
+    display: block;
+    background-color: red;
+    height: 2px;
+    animation: none;
 }
 
 .register-control-icon {
@@ -128,4 +143,15 @@ i.register-control-icon-check {
 
 .register-control--success .register-control-icon-check {
     visibility: unset;
+}
+
+@keyframes scale1 {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
